@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/_385516"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <EditText
+            android:id="@+id/etusername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@android:drawable/btn_star_big_on"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:inputType="textPersonName"
+            android:hint="User Name"
+            android:textAlignment="viewEnd"
+            android:textColor="#FAF9F9"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <EditText
+            android:id="@+id/etpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@android:drawable/ic_lock_lock"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textAlignment="viewEnd"
+            android:textColor="#EFE9E9"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/material_on_surface_disabled"
+            android:fontFamily="sans-serif-black"
+            android:text="LOGIN"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:translationX="50dp"
+            android:typeface="normal"
+            app:cornerRadius="100dp" />
+
+        <TextView
+            android:id="@+id/tvinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attempts left :  "
+            android:textAlignment="center"
+            android:textSize="16sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
