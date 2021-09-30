@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
+        <item>@font/abril_fatface</item>
         <item>@font/audiowide</item>
         <item>@font/cuprum</item>
+        <item>@font/erica_one</item>
         <item>@font/ubuntu_mono</item>
         <item>@font/ultra</item>
     </array>
