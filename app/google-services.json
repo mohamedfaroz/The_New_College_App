@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "895561540001",
+    "project_id": "thenewcollege-6e161",
+    "storage_bucket": "thenewcollege-6e161.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895561540001:android:1dbcaf6c8ed5675d606be0",
+        "android_client_info": {
+          "package_name": "com.example.thenewcollege"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895561540001-be2io65bkesslb20eq4v0s44l42r8t34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLLNwdcOxVoxsIjUoW7r8diXskt20Pz-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895561540001-be2io65bkesslb20eq4v0s44l42r8t34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

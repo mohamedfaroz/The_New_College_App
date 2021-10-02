@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentRegistration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/_385516"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tinewpassword"
+        android:layout_width="376dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="150dp"
+        android:background="#00BF56"
+        android:hint="New Password"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiregemail"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#2C2A2A">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etnewpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiregemail"
+        android:layout_width="376dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="51dp"
+        android:background="#00BF56"
+        android:hint="Enter Email"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintBottom_toTopOf="@+id/tinewpassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tidepartment">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etnewmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tidepartment"
+        android:layout_width="376dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="25dp"
+        android:background="#00BF56"
+        android:hint="Enter Department"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintBottom_toTopOf="@+id/tiregemail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etdepartment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="224dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="23dp"
+        android:fontFamily="casual"
+        android:shadowColor="@color/black"
+        android:shadowDy="5"
+        android:shadowRadius="6"
+        android:text="New User?"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#EE2400"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="147dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="584dp"
+        android:fontFamily="casual"
+        android:shadowColor="@color/black"
+        android:shadowDy="5"
+        android:shadowRadius="6"
+        android:text="Register"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="113dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="558dp"
+        android:fontFamily="casual"
+        android:shadowColor="@color/black"
+        android:shadowDy="5"
+        android:shadowRadius="6"
+        android:text="Here..."
+        android:textColor="#00BF56"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tiname"
+        android:layout_width="376dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="22dp"
+        android:background="#00BF56"
+        android:hint="Enter Name"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintBottom_toTopOf="@+id/tidepartment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etnewname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnregisteruser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="58dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Register User"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tinewpassword" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="204dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginBottom="21dp"
+        android:progressTint="@android:color/holo_orange_light"
+        app:layout_constraintBottom_toTopOf="@+id/tiname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+</androidx.constraintlayout.widget.ConstraintLayout>
