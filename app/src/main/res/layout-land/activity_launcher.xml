@@ -28,7 +28,7 @@
             android:text="OFFICE ADMIN"
             android:textSize="16sp"
             android:textStyle="italic"
-            android:translationX="40dp"
+            android:translationX="65dp"
             app:cornerRadius="100dp" />
 
         <Space
@@ -44,7 +44,7 @@
             android:text="MASJID ADMIN"
             android:textSize="16sp"
             android:textStyle="italic"
-            android:translationX="40dp"
+            android:translationX="65dp"
             app:cornerRadius="100dp" />
 
         <Space
@@ -60,7 +60,7 @@
             android:text="STUDENT"
             android:textSize="16sp"
             android:textStyle="italic"
-            android:translationX="40dp"
+            android:translationX="65dp"
             app:cornerRadius="100dp" />
 
     </LinearLayout>

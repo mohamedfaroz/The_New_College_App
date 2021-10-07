@@ -1,27 +1,36 @@
 package com.example.thenewcollege;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class StudentRegistration extends AppCompatActivity implements View.OnClickListener{
     private EditText studentname;
     private EditText department;
-    private EditText registermail;
-    private EditText registerpassword;
+    public EditText registermail;
+    public EditText registerpassword;
     private Button registeruser;
     private ProgressBar bar;
     private FirebaseAuth mAuth;
+    private static final String TAG ="Hello";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +39,7 @@ public class StudentRegistration extends AppCompatActivity implements View.OnCli
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_registration);
+
 
         studentname = (EditText) findViewById(R.id.etnewname);
         department = (EditText) findViewById(R.id.etdepartment);
@@ -42,7 +52,17 @@ public class StudentRegistration extends AppCompatActivity implements View.OnCli
         registeruser.setOnClickListener((OnClickListener) this);
 
 
+    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
+    }
 
+    private void updateUI(FirebaseUser currentUser) {
+        Intent intent =new Intent(StudentRegistration.this,exampleactivity.class);
     }
 
 
@@ -85,14 +105,40 @@ public class StudentRegistration extends AppCompatActivity implements View.OnCli
             registerpassword.requestFocus();
             return;
         }
+        bar.setVisibility(View.VISIBLE);
 
+        mAuth.createUserWithEmailAndPassword(em,pas)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            User user = new User(n,em,d);
+                            FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getUid())
+                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(StudentRegistration.this, "User has been Registered Succecssfully", Toast.LENGTH_LONG).show();
+                                        bar.setVisibility(View.GONE);
+                                    } else {
+                                        Toast.makeText(StudentRegistration.this, "Authentication failed.",
+                                                Toast.LENGTH_SHORT).show();
+
+                                    }
+                                }
+                            });
+
+                        } else {
+                            Toast.makeText(StudentRegistration.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            bar.setVisibility(View.GONE);
+                        }
+                    }
+                });
     }
+        public void onClick(View view) {
 
+                        registerUser();
+                    }
 
-    @Override
-    public void onClick(View view) {
-        registerUser();
-        Intent intent = new Intent(StudentRegistration.this, exampleactivity.class);
-        startActivity(intent);
-    }
 }

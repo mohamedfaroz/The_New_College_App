@@ -1,17 +1,19 @@
 package com.example.thenewcollege;
 
-public class User {
-    public String studentname,department,registeruser;
 
+import android.widget.EditText;
+
+public class User {
+
+    public String n,em,d;
     public User(){
 
     }
-    public User(String studentname,String department,String registeruser){
-        this.studentname=studentname;
-        this.department=department;
-        this.registeruser=registeruser;
-
-
-    }
+    public User(String n,String em,String d)
+        {
+        this.n=n;
+        this.em=em;
+        this.d=d;
+        }
 
 }

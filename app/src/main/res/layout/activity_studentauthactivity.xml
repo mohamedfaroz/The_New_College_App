@@ -7,15 +7,27 @@
     android:translationX="-3dp"
     tools:context=".Studentauthactivity">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvslinfo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/_385516"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:text="Attempts left :"
+        android:textAlignment="center"
+        android:textColor="#D50000"
+        android:textSize="20sp"
+        android:translationY="750dp"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="750dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tiemail"
@@ -70,11 +82,13 @@
 
     <View
         android:id="@+id/divider"
-        android:layout_width="391dp"
+        android:layout_width="500dp"
         android:layout_height="8dp"
         android:layout_marginTop="34dp"
+        android:layout_marginEnd="6dp"
         android:layout_marginBottom="48dp"
         android:background="#EE2400"
+        android:translationX="50dp"
         app:layout_constraintBottom_toTopOf="@+id/tiemail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -96,7 +110,7 @@
         android:shadowRadius="6"
         android:text="THE NEW COLLEGE"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,6 +137,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
         android:fontFamily="casual"
         android:shadowColor="@color/black"
         android:shadowDy="5"
@@ -190,22 +205,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tipassword"
         app:layout_constraintVertical_bias="0.43" />
-
-    <ProgressBar
-        android:id="@+id/progressBar3"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="189dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="114dp"
-        android:layout_marginBottom="19dp"
-        android:visibility="visible"
-        android:progressTint="@android:color/holo_orange_light"
-        app:layout_constraintBottom_toTopOf="@+id/tiemail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <TextView
         android:id="@+id/tvforgetpassword"
