@@ -1,144 +1,325 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:ignore="SpeakableTextPresentCheck"
+    android:layout_height="match_parent"
+    android:background="@drawable/coloursplashedited"
+    tools:context=".masjidadminpanel_activity">
 
-    tools:layout_editor_absoluteX="1dp"
-    android:fillViewport="true">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-
+    <ScrollView
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="400dp"
+        android:layout_height="1dp"
+
+        android:layout_marginStart="15dp"
+        android:background="@color/black"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvtitle"
+        app:layout_constraintVertical_bias="0.528" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="3dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvtitle"
+        app:layout_constraintVertical_bias="0.893" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvtitle"
+        app:layout_constraintVertical_bias="0.398" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvtitle"
+        app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/tvfajr"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        tools:context=".masjidadminpanel_activity"
-        tools:ignore="ExtraText">
+        android:fontFamily="@font/audiowide"
+        android:text="Fajr"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328" />
 
+    <TextView
+        android:id="@+id/tvzuhar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:text="Zuhr"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="294dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/tvprayertimings_border"
-            android:fontFamily="@font/abril_fatface"
-            android:padding="6dp"
-            android:text="PRAYER TIMINGS"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvasar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:text="Asar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.653" />
 
+    <TextView
+        android:id="@+id/tvisha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:text="Isha"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.985" />
 
-        <EditText
-            android:id="@+id/etdate1"
-            android:layout_width="203dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="92dp"
-            android:ems="10"
-            android:fontFamily="@font/aldrich"
-            android:hint="select date"
-            android:inputType="date"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.436"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/etfajr"
+        style="@android:style/Widget.AutoCompleteTextView"
+        android:layout_width="167dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="@color/white"
+        android:textColorHint="@android:color/holo_green_light"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
 
-        <TextView
-            android:id="@+id/tvfajr"
-            android:layout_width="117dp"
-            android:layout_height="68dp"
-            android:layout_marginTop="216dp"
-            android:background="@drawable/tvfajr_border"
-            android:fontFamily="@font/abril_fatface"
-            android:padding="10dp"
-            android:text="Fajr :"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.054"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/etzuhr"
+        android:layout_width="167dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.482"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="117dp"
-            android:layout_height="68dp"
-            android:layout_marginTop="320dp"
-            android:background="@drawable/tvzuhr_border"
-            android:fontFamily="@font/abril_fatface"
-            android:padding="10dp"
-            android:text="Zuhr :"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.054"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/etasar"
+        android:layout_width="167dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.655" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="174dp"
-            android:layout_height="69dp"
-            android:layout_marginTop="428dp"
-            android:background="@drawable/tvmaghrib_border"
-            android:fontFamily="@font/abril_fatface"
-            android:padding="10dp"
-            android:text="Maghrib :"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.025"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/etmaghrib"
+        android:layout_width="167dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.832" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="110dp"
-            android:layout_height="61dp"
-            android:layout_marginTop="532dp"
-            android:background="@drawable/tvmaghrib_border"
-            android:fontFamily="@font/abril_fatface"
-            android:padding="10dp"
-            android:text="Isha :"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.076"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/etisha"
+        android:layout_width="167dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.979" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="173dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="636dp"
-            android:background="@drawable/tvmaghrib_border"
-            android:fontFamily="@font/abril_fatface"
-            android:padding="10dp"
-            android:text="Jummah :"
-            android:textSize="34sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.029"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/etdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:text="Enter Date"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="123dp"
-            android:layout_height="62dp"
-            android:layout_marginTop="800dp"
-            android:text="Apply"
-            app:cornerRadius="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.461"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvtitle"
+        android:layout_width="351dp"
+        android:layout_height="82dp"
+        android:shadowColor="#090909"
+        android:text="enter prayer timings"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
 
+    <TextView
+<<<<<<<<< Temporary merge branch 1
+        android:id="@+id/tvmaghrib"
+        android:layout_width="218dp"
+        android:layout_height="58dp"
+=========
+        android:id="@+id/textView5"
+        android:layout_width="213dp"
+        android:layout_height="70dp"
+>>>>>>>>> Temporary merge branch 2
+        android:fontFamily="@font/audiowide"
+        android:text="Maghrib"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.015"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.832" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<<<<<<<<< Temporary merge branch 1
+    <View
+        android:id="@+id/view6"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvtitle"
+        app:layout_constraintVertical_bias="0.559" />
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvtitle"
+        app:layout_constraintVertical_bias="0.713" />
+=========
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="302dp" />
 
-</ScrollView>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="412dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="527dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="650dp" />
+
+>>>>>>>>> Temporary merge branch 2
+</androidx.constraintlayout.widget.ConstraintLayout>
