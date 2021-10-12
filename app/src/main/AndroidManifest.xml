@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheNewCollege">
         <activity
+            android:name=".exampleactivity"
+            android:exported="true" />
+        <activity
+            android:name=".Studentauthactivity"
+            android:exported="true" />
+        <activity
             android:name=".masjidadminpanel_activity"
             android:exported="true" />
         <activity
             android:name=".authentication_activity"
+            android:exported="true" />
+        <activity
+            android:name=".StudentRegistration"
             android:exported="true" />
         <activity
             android:name=".launcherActivity"
