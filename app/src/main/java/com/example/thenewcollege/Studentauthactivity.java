@@ -22,26 +22,42 @@ import com.google.firebase.auth.FirebaseUser;
 public  class Studentauthactivity extends AppCompatActivity  {
     private FirebaseAuth mAuth;
     private Button login;
-    private TextView register;
+    private TextView register,forgotpassword;
     private EditText loginemail;
     private EditText password;
     private ProgressBar progressBar;
     private EditText a;
     private EditText b;
-    private int attempts=6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         mAuth = FirebaseAuth.getInstance();
+        if(mAuth.getCurrentUser()!=null){
+            Intent intent=new Intent(Studentauthactivity.this,exampleactivity.class);
+            startActivity(intent);
+
+
+            }
+
+
         setContentView(R.layout.activity_studentauthactivity);
+
         register = (TextView) findViewById(R.id.tvnewregister);
+        forgotpassword= (TextView) findViewById(R.id.tvforgetpassword);
         login = (Button) findViewById(R.id.btnstudentlogin);
         loginemail = (EditText) findViewById(R.id.etemail);
         password = (EditText) findViewById(R.id.etpassword);
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
-        TextView info = findViewById(R.id.tvslinfo);
+        forgotpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Studentauthactivity.this,ForgotPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,12 +72,23 @@ public  class Studentauthactivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
 
-                progressBar.setVisibility(View.VISIBLE);
+
                userlogin();
             }
         });
 
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        updateUI(currentUser);
+    }
+    private void updateUI(FirebaseUser currentUser) {
+        Intent intent =new Intent(Studentauthactivity.this,exampleactivity.class);
+    }
+
 
     private void userlogin() {
 
@@ -98,6 +125,7 @@ public  class Studentauthactivity extends AppCompatActivity  {
                     if(user.isEmailVerified()){
                         Intent intent = new Intent(Studentauthactivity.this, exampleactivity.class);
                         startActivity(intent);
+                        finish();
                     }else{
                         user.sendEmailVerification();
                         Toast.makeText(Studentauthactivity.this, "Please Check your Email to continue", Toast.LENGTH_SHORT).show();
@@ -113,9 +141,5 @@ public  class Studentauthactivity extends AppCompatActivity  {
         });
     }
 
-    private void updateUI(FirebaseUser currentUser) {
-        Intent intent=new Intent(Studentauthactivity.this,exampleactivity.class);
-        startActivity(intent);
-    }
 
 }
