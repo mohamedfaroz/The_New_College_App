@@ -53,17 +53,8 @@ public class StudentRegistration extends AppCompatActivity implements View.OnCli
 
 
     }
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
-    }
 
-    private void updateUI(FirebaseUser currentUser) {
-        Intent intent =new Intent(StudentRegistration.this,exampleactivity.class);
-    }
+
 
 
     private void registerUser() {

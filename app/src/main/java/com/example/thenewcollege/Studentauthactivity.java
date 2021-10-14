@@ -53,6 +53,8 @@ public  class Studentauthactivity extends AppCompatActivity  {
         forgotpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setVisibility(View.VISIBLE);
+                finish();
                 Intent intent=new Intent(Studentauthactivity.this,ForgotPasswordActivity.class);
                 startActivity(intent);
             }
@@ -63,6 +65,7 @@ public  class Studentauthactivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
                 progressBar.setVisibility(View.VISIBLE);
+                finish();
                 Intent intent =new Intent(Studentauthactivity.this,StudentRegistration.class);
                 startActivity(intent);
             }
@@ -71,8 +74,6 @@ public  class Studentauthactivity extends AppCompatActivity  {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                userlogin();
             }
         });

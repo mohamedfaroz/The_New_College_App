@@ -119,7 +119,7 @@
         android:shadowDy="5"
         android:shadowRadius="6"
         android:text="Register"
-        android:textColor="@android:color/holo_orange_light"
+        android:textColor="#EE2400"
         android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
