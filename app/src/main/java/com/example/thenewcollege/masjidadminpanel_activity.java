@@ -14,5 +14,7 @@ public class masjidadminpanel_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_masjidadminpanel);
+        EditText fajr=findViewById(R.id.etfajr);
+        fajr.getText();
     }
 }
