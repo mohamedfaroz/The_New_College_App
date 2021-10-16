@@ -161,7 +161,6 @@ public class masjidadminpanel_activity extends AppCompatActivity {
                 timePickerDialog.updateTime(t4Hour,t4Minute);
 
                 timePickerDialog.show();
-
             }
 
 
