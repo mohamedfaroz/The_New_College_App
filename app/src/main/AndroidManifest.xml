@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TheNewCollege">
         <activity
+            android:name=".OfficeAdminPanel"
+            android:exported="false" />
+        <activity
+            android:name=".OfficeAdminAuth"
+            android:exported="false" />
+        <activity
             android:name=".ForgotPasswordActivity"
             android:exported="true" />
         <activity

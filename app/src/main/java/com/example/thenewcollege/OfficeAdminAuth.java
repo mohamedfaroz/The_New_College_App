@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 
 
-public class authentication_activity extends AppCompatActivity {
+
+public class OfficeAdminAuth extends AppCompatActivity {
     private EditText name;
     private EditText password;
     private Button login;
@@ -21,22 +22,22 @@ public class authentication_activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_authentication);
-        login=(Button)findViewById(R.id.btnlogin);
-        name=(EditText)findViewById(R.id.etusername);
-        password=(EditText)findViewById(R.id.etpassword);
-        info=(TextView) findViewById(R.id.tvinfo);
+        setContentView(R.layout.activity_office_admin_auth);
+        login=(Button)findViewById(R.id.btnOFFICElogin);
+        name=(EditText)findViewById(R.id.etOFFICEusername);
+        password=(EditText)findViewById(R.id.etOFFICEpassword);
+        info=(TextView) findViewById(R.id.tvOFFICEinfo);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                authentication2(name.getText().toString().trim(),password.getText().toString().trim());
+                authentication1(name.getText().toString().trim(),password.getText().toString().trim());
 
             }
         });
     }
-    private void authentication2(String username,String password){
+    private void authentication1(String username,String password){
         if((username.equals("Admin"))&&(password.equals("1234"))){
-            Intent intent =new Intent(authentication_activity.this,masjidadminpanel_activity.class);
+            Intent intent =new Intent(OfficeAdminAuth.this,OfficeAdminPanel.class);
             startActivity(intent);
         }else{
             attempts--;
@@ -47,4 +48,5 @@ public class authentication_activity extends AppCompatActivity {
         }
 
     }
+
 }

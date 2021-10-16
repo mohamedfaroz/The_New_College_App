@@ -15,29 +15,30 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.71"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        app:layout_constraintVertical_bias="0.399" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tiemail"
         android:layout_width="376dp"
         android:layout_height="55dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="398dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="9dp"
-        android:layout_marginBottom="33dp"
         android:background="#00BF56"
         android:hint="Enter Email"
         app:boxBackgroundColor="@color/white"
         app:boxBackgroundMode="outline"
         app:boxStrokeColor="@color/black"
         app:hintAnimationEnabled="true"
-        app:layout_constraintBottom_toTopOf="@+id/tipassword"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etemail"
@@ -51,9 +52,8 @@
         android:layout_width="376dp"
         android:layout_height="55dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="33dp"
         android:layout_marginEnd="9dp"
-        android:layout_marginBottom="244dp"
+        android:layout_marginBottom="10dp"
         android:background="#00BF56"
         android:hint="Enter Password"
         app:boxBackgroundColor="@color/white"
@@ -61,8 +61,10 @@
         app:boxStrokeColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tiemail"
+        app:layout_constraintTop_toTopOf="@+id/tiemail"
+        app:layout_constraintVertical_bias="0.457"
         app:passwordToggleEnabled="true"
         app:passwordToggleTint="#3E3C3C">
 
@@ -73,29 +75,12 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="500dp"
-        android:layout_height="8dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="48dp"
-        android:background="#EE2400"
-        android:translationX="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/tiemail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="279dp"
         android:layout_height="43dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="247dp"
-        android:layout_marginEnd="57dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="12dp"
         android:fontFamily="sans-serif-light"
         android:shadowColor="@color/black"
@@ -106,30 +91,31 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.7" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="260dp"
         android:layout_height="220dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="11dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_marginTop="69dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvforgetpassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.122"
         app:srcCompat="@drawable/activity_logo" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="25dp"
         android:layout_height="44dp"
+        android:layout_marginTop="240dp"
         android:fontFamily="casual"
         android:shadowColor="@color/black"
         android:shadowDy="5"
@@ -138,17 +124,18 @@
         android:textColor="#00BF56"
         android:textSize="30sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.399"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.833" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.042" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="24dp"
         android:layout_height="46dp"
+        android:layout_marginTop="240dp"
         android:fontFamily="casual"
         android:shadowColor="@color/black"
         android:shadowDy="5"
@@ -157,17 +144,18 @@
         android:textColor="#EE2400"
         android:textSize="30sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.043" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="24dp"
         android:layout_height="46dp"
+        android:layout_marginTop="240dp"
         android:fontFamily="casual"
         android:shadowColor="@color/black"
         android:shadowDy="5"
@@ -176,12 +164,12 @@
         android:textColor="#00BF56"
         android:textSize="30sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/divider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.593"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.749"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.043" />
 
     <Button
         android:id="@+id/btnstudentlogin"
@@ -194,49 +182,58 @@
         app:cornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.771"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tipassword"
-        app:layout_constraintVertical_bias="0.43" />
+        app:layout_constraintVertical_bias="0.729" />
 
     <TextView
         android:id="@+id/tvforgetpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="227dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-black"
         android:text="Forgot Password"
         android:textColor="?android:attr/textColorLink"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnstudentlogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tipassword"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tipassword"
         app:layout_constraintTop_toBottomOf="@+id/tipassword"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.725" />
 
     <TextView
         android:id="@+id/tvnewregister"
-        android:layout_width="127dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="137dp"
+        android:layout_height="20dp"
         android:clickable="true"
         android:fontFamily="sans-serif-black"
         android:minHeight="48dp"
         android:text="New Register"
         android:textColor="?android:attr/textColorLink"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnstudentlogin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tipassword"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="@+id/tipassword"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2"
+        app:layout_constraintVertical_bias="0.469" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="8dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="1dp"
+        android:background="#EE2400"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
-        app:layout_constraintStart_toEndOf="@+id/tvforgetpassword"
-        app:layout_constraintTop_toBottomOf="@+id/tipassword"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.511" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
