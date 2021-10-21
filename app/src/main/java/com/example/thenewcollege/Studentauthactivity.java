@@ -140,11 +140,11 @@ public  class Studentauthactivity extends AppCompatActivity  {
                     }else{
                         user.sendEmailVerification();
                         Toast.makeText(Studentauthactivity.this, "Please Check your Email to continue", Toast.LENGTH_SHORT).show();
-                    }
+                      }
 
-            }else{
-                    Toast.makeText(Studentauthactivity.this, "Failed to Login Please check your Details given", Toast.LENGTH_SHORT).show();
-
+                }else{
+                    Toast.makeText(Studentauthactivity.this, "Failed to Login.Please check if the Email and password is correct", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
         }
 

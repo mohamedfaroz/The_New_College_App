@@ -10,10 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="false"
-        android:background="@drawable/_385516"
+        android:background="@drawable/appbg"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="175dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Space
             android:layout_width="match_parent"
@@ -28,7 +30,7 @@
             android:text="OFFICE ADMIN"
             android:textSize="16sp"
             android:textStyle="italic"
-            android:translationX="45dp"
+            android:translationX="42.5dp"
             app:cornerRadius="100dp" />
 
         <Space
@@ -44,8 +46,12 @@
             android:text="MASJID ADMIN"
             android:textSize="16sp"
             android:textStyle="italic"
-            android:translationX="45dp"
+            android:translationX="42.5dp"
             app:cornerRadius="100dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Space
             android:layout_width="match_parent"
@@ -60,8 +66,12 @@
             android:text="STUDENT"
             android:textSize="16sp"
             android:textStyle="italic"
-            android:translationX="45dp"
+            android:translationX="42.5dp"
             app:cornerRadius="100dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

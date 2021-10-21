@@ -7,19 +7,38 @@
     tools:context=".OfficeAdminPanel">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvdayorder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="186dp"
-        android:layout_marginTop="197dp"
-        android:layout_marginEnd="164dp"
-        android:layout_marginBottom="591dp"
-        android:text="HELLO"
-        android:textSize="60sp"
-        android:textStyle="bold"
+        android:fontFamily="@font/aldrich"
+        android:shadowColor="#000000"
+        android:shadowDy="5"
+        android:shadowRadius="4"
+        android:text="Today's day order  :"
+        android:textAllCaps="false"
+        android:textColor="#EE2400"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.128" />
+
+    <Spinner
+        android:id="@+id/spnrdayorder"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+        android:drawSelectorOnTop="true"
+        android:entries="@array/spinnerItems"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.217"
+        app:layout_constraintStart_toEndOf="@+id/tvdayorder"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

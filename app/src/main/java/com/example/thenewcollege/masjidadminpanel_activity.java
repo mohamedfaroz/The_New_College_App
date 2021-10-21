@@ -1,52 +1,38 @@
 package com.example.thenewcollege;
 
-import android.app.DatePickerDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.text.format.DateFormat;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Calendar;
-import java.util.Objects;
 
 public class masjidadminpanel_activity extends AppCompatActivity {
-
-
-    EditText etdate1picker;
-    TextView etfajrpicker;
-    TextView etzuhrpicker;
-    TextView etasarpicker;
-    TextView etmaghribpicker;
-    TextView etishapicker;
-    TextView etjummahpicker;
-    int t1Hour,t1Minute;
-    int t2Hour,t2Minute;
-    int t3Hour,t3Minute;
-    int t4Hour,t4Minute;
-    int t5Hour,t5Minute;
-    int t6Hour,t6Minute;
-
+        private EditText etdate1picker;
+        private TextView etfajrpicker,etzuhrpicker,etasarpicker,etmaghribpicker,etishapicker,etjummahpicker;
+        private int t1Hour,t1Minute,t2Hour,t2Minute,t3Hour,t3Minute,t4Hour,t4Minute,t5Hour,t5Minute,t6Hour,t6Minute;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Objects.requireNonNull(getSupportActionBar()).hide();
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_masjidadminpanel);
 
 
-        etdate1picker = findViewById(R.id.etdate1);
-        etfajrpicker = findViewById(R.id.tvfajrtime);
-        etzuhrpicker = findViewById(R.id.tvzuhrtime);
-        etasarpicker = findViewById(R.id.tvasartime);
-        etmaghribpicker = findViewById(R.id.tvmaghribtime);
-        etishapicker = findViewById(R.id.tvishatime);
-        etjummahpicker = findViewById(R.id.tvjummahtime);
+        etdate1picker =(EditText) findViewById(R.id.etdate1);
+        etfajrpicker =(TextView) findViewById(R.id.tvfajrtime);
+        etzuhrpicker =(TextView) findViewById(R.id.tvzuhrtime);
+        etasarpicker =(TextView) findViewById(R.id.tvasartime);
+        etmaghribpicker =(TextView) findViewById(R.id.tvmaghribtime);
+        etishapicker =(TextView) findViewById(R.id.tvishatime);
+        etjummahpicker =(TextView) findViewById(R.id.tvjummahtime);
 
 
         Calendar calender = Calendar.getInstance();
@@ -77,11 +63,11 @@ public class masjidadminpanel_activity extends AppCompatActivity {
 
                 timePickerDialog.show();
 
-                            }
+            }
 
 
-                ;
-            });
+            ;
+        });
 
         etzuhrpicker.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -234,14 +220,17 @@ public class masjidadminpanel_activity extends AppCompatActivity {
         etdate1picker.setOnClickListener(view -> {
             DatePickerDialog datePickerDialog = new DatePickerDialog(
                     masjidadminpanel_activity.this, (datePicker, year12, month12, day1) -> {
-                        month12 = month12 +1;
-                        String date = day1 +"/"+ month12 +"/"+ year12;
-                        etdate1picker.setText(date);
+                month12 = month12 +1;
+                String date = day1 +"/"+ month12 +"/"+ year12;
+                etdate1picker.setText(date);
 
-                    },year,month,day);
+            },year,month,day);
             datePickerDialog.show();
 
         });
-        }
-
     }
+
+}
+
+
+
